@@ -1,0 +1,35 @@
+/* PDF-like light design */
+:root{
+  --bg: #f3f5f7;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --text: #0f172a;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --input-border: #e5e7eb;
+  --danger: #ef4444;
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+.container{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+.card{background:var(--card);border-radius:12px;padding:28px;width:100%;max-width:420px;box-shadow:0 6px 20px rgba(15,23,42,0.06)}
+.brand{font-weight:700;color:var(--primary);font-size:20px;margin-bottom:8px;text-align:center}
+.h1{font-size:22px;margin:0 0 6px;text-align:center}
+.sub{color:var(--muted);font-size:14px;text-align:center;margin-bottom:18px}
+.form{display:flex;flex-direction:column;gap:12px}
+label{font-size:13px;color:var(--muted);margin-bottom:6px}
+input,textarea,select{padding:12px 14px;border-radius:8px;border:1px solid var(--input-border);font-size:15px;background:#fff;color:var(--text);outline:none}
+input::placeholder{color:#9ca3af}
+button{background:var(--primary);color:#fff;border:none;padding:12px;border-radius:8px;font-weight:600;cursor:pointer}
+button:hover{background:var(--primary-hover)}
+.link{color:var(--primary);text-decoration:underline;cursor:pointer}
+.row{display:flex;gap:12px;align-items:center}
+.checkbox{display:flex;gap:8px;align-items:center}
+.footer{margin-top:12px;text-align:center;color:var(--muted);font-size:13px}
+.notes{margin-top:12px}
+.note{background:#fafafa;border:1px solid #f1f5f9;padding:12px;border-radius:8px;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.note .title{font-weight:600}
+.note button{background:var(--danger);border-radius:6px;padding:6px 8px;color:#fff;border:none;cursor:pointer}
+.note button:hover{background:#dc2626}
+@media (max-width:480px){.card{padding:18px}}
