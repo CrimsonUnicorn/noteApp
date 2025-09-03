@@ -4,9 +4,9 @@ import bcrypt from 'bcryptjs';
 import nodemailer from 'nodemailer';
 import cookie from 'cookie';
 import { OAuth2Client } from 'google-auth-library';
-import { User } from '../models/User.js';
-import { signAccess, signRefresh, verifyRefresh } from '../utils/jwt.js';
-import { env } from '../config/env.js';
+import { User } from '../models/User';
+import { signAccess, signRefresh, verifyRefresh } from '../utils/jwt';
+import { env } from '../config/env';
 
 const router = Router();
 const googleClient = new OAuth2Client(env.GOOGLE_CLIENT_ID);
