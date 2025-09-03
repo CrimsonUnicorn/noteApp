@@ -11,9 +11,13 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin: ['http://localhost:5173'],
-  credentials: true
+  origin: [
+    "http://localhost:5173",                 // local development
+    "https://note-app-nine-omega.vercel.app" // deployed frontend
+  ],
+  credentials: true,
 }));
+
 
 app.get('/api/health', (_req, res) => res.json({ ok: true }));
 app.use('/api/auth', authRoutes);
